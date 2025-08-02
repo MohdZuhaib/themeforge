@@ -2,27 +2,35 @@ import React from 'react';
 import { Product } from '../types';
 import { useThemeStyles } from '../hooks/useThemeStyles';
 import { Star, ShoppingCart } from 'lucide-react';
+import { useTheme } from '../contexts/ThemeContext';
 
 interface ProductCardProps {
   product: Product;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const styles = useThemeStyles();
 
+  const { currentTheme } = useTheme();
+  const styles = useThemeStyles();
+  const isTheme3 = currentTheme === 'theme3';
+
+  console.log('currentTheme', currentTheme)
   return (
     <div className={styles.card.base}>
-      <div className="aspect-w-16 aspect-h-12 bg-gray-200">
+      <div
+        className={`bg-gray-200 w-full flex items-center justify-center shrink-0 ${!isTheme3 ? 'md:w-[180px] h-[180px]' : ''
+          }`}
+      >
         <img
           src={product.image}
           alt={product.title}
-          className="w-full h-48 object-cover"
+          className={`object-contain h-[160px] w-[160px]`}
           loading="lazy"
         />
       </div>
 
       <div className="p-4">
-        <h3 className={styles.card.title}>
+        <h3 className={`${styles.card.title} min-h-[4.5rem]`}>
           {product.title}
         </h3>
 

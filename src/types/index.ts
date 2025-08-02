@@ -18,6 +18,7 @@ export interface ThemeStyles {
   container: string;
   layout: string;
   main: string;
+  contentWrapper: string;
 
   // Header Styles
   header: {

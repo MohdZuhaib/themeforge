@@ -1,6 +1,6 @@
 import { useTheme } from '../contexts/ThemeContext';
 import { ChevronDown } from 'lucide-react';
-import { getDropdownClasses, themeOptions } from '../utils';
+import { themeOptions } from '../utils';
 
 const ThemeDropDown = () => {
 
@@ -15,7 +15,7 @@ const ThemeDropDown = () => {
                 <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
             </button>
 
-            <div className={`absolute right-0 mt-2 w-48 ${getDropdownClasses(currentTheme)} opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2`}>
+            <div className={`absolute right-0 mt-2 w-48  opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2`}>
                 <div className="py-2">
                     {themeOptions.map((option) => (
                         <button

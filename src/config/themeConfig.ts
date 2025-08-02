@@ -6,7 +6,7 @@ export const themeStyles: Record<ThemeType, ThemeStyles> = {
         container: 'min-h-screen bg-gray-50 text-gray-900 font-sans transition-all duration-500',
         layout: 'max-w-7xl mx-auto py-8',
         main: 'pt-16 px-4 md:px-8 lg:px-12',
-
+        contentWrapper: 'flex flex-col gap-8',
         // Header
         header: {
             base: 'fixed top-0 left-0 right-0 z-50 bg-white shadow-sm border-b border-gray-200 transition-all duration-500',
@@ -33,7 +33,7 @@ export const themeStyles: Record<ThemeType, ThemeStyles> = {
 
         // Card Component
         card: {
-            base: 'bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-1',
+            base: 'flex bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-1',
             title: 'text-lg font-semibold text-gray-900 mb-2 line-clamp-2',
             description: 'text-sm text-gray-600 mb-4 line-clamp-3',
             price: 'text-2xl font-bold text-blue-600',
@@ -44,7 +44,7 @@ export const themeStyles: Record<ThemeType, ThemeStyles> = {
 
         // Buttons
         button: {
-            primary: 'w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2',
+            primary: ' bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2',
             secondary: 'bg-white text-blue-600 border border-blue-600 px-6 py-2 rounded-md font-semibold hover:bg-blue-50 transition-all duration-300',
             ghost: 'text-blue-600 px-4 py-2 rounded-md hover:bg-blue-50 transition-all duration-300'
         },
@@ -113,6 +113,7 @@ export const themeStyles: Record<ThemeType, ThemeStyles> = {
         container: 'min-h-screen bg-gray-900 text-gray-100 font-serif transition-all duration-500',
         layout: 'max-w-6xl mx-auto py-8',
         main: 'pt-16 flex',
+        contentWrapper: 'flex flex-col gap-8',
 
         // Header
         header: {
@@ -129,21 +130,21 @@ export const themeStyles: Record<ThemeType, ThemeStyles> = {
 
         // Typography
         typography: {
-            h1: 'text-4xl md:text-5xl font-bold text-gray-100 mb-6 text-center',
-            h2: 'text-2xl font-bold text-gray-100 mb-4',
-            h3: 'text-lg font-bold text-gray-100',
-            body: 'text-xl text-gray-300 mb-8 text-center max-w-3xl mx-auto',
-            bodySecondary: 'text-gray-300 leading-relaxed text-lg',
-            caption: 'text-sm text-gray-300',
-            subtitle: 'text-2xl font-bold text-gray-100 mb-4'
+            h1: 'text-3xl md:text-4xl font-bold text-gray-100 mb-6 text-center',
+            h2: 'text-xl font-bold text-gray-100 mb-4',
+            h3: 'text-md font-bold text-gray-100',
+            body: 'text-sm text-gray-300 mb-8 text-center max-w-3xl mx-auto',
+            bodySecondary: 'text-gray-300 leading-relaxed text-xs',
+            caption: 'text-xs text-gray-300',
+            subtitle: 'text-xs font-bold text-gray-100 mb-4'
         },
 
         // Card Component
         card: {
-            base: 'bg-gray-800 rounded-lg shadow-lg border border-gray-700 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-blue-500',
+            base: 'flex bg-gray-800 rounded-lg shadow-lg border border-gray-700 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-blue-500',
             title: 'text-lg font-bold text-gray-100 mb-2 line-clamp-2',
-            description: 'text-sm text-gray-300 mb-4 line-clamp-3',
-            price: 'text-2xl font-bold text-blue-400',
+            description: 'text-xs text-gray-300 mb-4 line-clamp-3',
+            price: 'text-xl font-bold text-blue-400',
             rating: 'flex items-center space-x-1 text-yellow-400',
             feature: 'bg-gray-800 rounded-lg shadow-lg border border-gray-700 p-6 text-center hover:shadow-xl transition-shadow',
             content: 'bg-gray-800 rounded-lg shadow-lg border border-gray-700 p-8 mb-8 hover:shadow-xl transition-shadow'
@@ -151,7 +152,7 @@ export const themeStyles: Record<ThemeType, ThemeStyles> = {
 
         // Buttons
         button: {
-            primary: 'w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-all hover:shadow-lg flex items-center justify-center space-x-2',
+            primary: 'bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-all hover:shadow-lg flex items-center justify-center space-x-1',
             secondary: 'bg-gray-800 text-blue-400 border border-blue-400 px-6 py-2 rounded-md font-bold hover:bg-gray-700 transition-all duration-300',
             ghost: 'text-blue-400 px-4 py-2 rounded-md hover:bg-gray-800 transition-all duration-300'
         },
@@ -220,6 +221,7 @@ export const themeStyles: Record<ThemeType, ThemeStyles> = {
         container: 'min-h-screen bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 text-gray-800 transition-all duration-500',
         layout: 'max-w-7xl mx-auto py-12',
         main: 'pt-16 px-4 md:px-8 lg:px-12',
+        contentWrapper: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
 
         // Header
         header: {

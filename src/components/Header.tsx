@@ -13,7 +13,6 @@ const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   const toggleMobileMenu = useCallback(() => {
-    console.log('calling close,isMobileMenuOpen', isMobileMenuOpen)
     setIsMobileMenuOpen(prev => !prev);
   }, []);
 
