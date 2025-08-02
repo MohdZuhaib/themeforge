@@ -13,104 +13,125 @@ export interface Product {
 
 export type ThemeType = 'theme1' | 'theme2' | 'theme3';
 
-export interface Theme {
-  // container: string;
-  // layout: string;
+export interface ThemeStyles {
+  // Layout & Container Styles
+  container: string;
+  layout: string;
+  main: string;
 
-  // // Header Styles
-  // header: {
-  //   base: string;
-  //   text: string;
-  //   logo: string;
-  //   nav: {
-  //     base: string;
-  //     active: string;
-  //     inactive: string;
-  //   };
-  //   dropdown: string;
-  // };
+  // Header Styles
+  header: {
+    base: string;
+    text: string;
+    logo: string;
+    nav: {
+      base: string;
+      active: string;
+      inactive: string;
+    };
+    dropdown: string;
+  };
 
-  // // Typography Styles
-  // typography: {
-  //   h1: string;
-  //   h2: string;
-  //   h3: string;
-  //   body: string;
-  //   bodySecondary: string;
-  //   caption: string;
-  // };
+  // Typography Styles
+  typography: {
+    h1: string;
+    h2: string;
+    h3: string;
+    body: string;
+    bodySecondary: string;
+    caption: string;
+    subtitle: string;
+  };
 
-  // // Component Styles
-  // card: {
-  //   base: string;
-  //   title: string;
-  //   description: string;
-  //   price: string;
-  //   rating: string;
-  // };
+  // Component Styles
+  card: {
+    base: string;
+    title: string;
+    description: string;
+    price: string;
+    rating: string;
+    feature: string;
+    content: string;
+  };
 
   // Button Styles
-  button: string;
+  button: {
+    primary: string;
+    secondary: string;
+    ghost: string;
+  };
 
   // Form Styles
-  // form: {
-  //   container: string;
-  //   label: string;
-  //   input: string;
-  //   textarea: string;
-  //   submit: string;
-  // };
+  form: {
+    container: string;
+    label: string;
+    input: string;
+    textarea: string;
+    submit: string;
+  };
 
-  // // Info Box Styles
-  // infoBox: {
-  //   base: string;
-  //   email: string;
-  //   phone: string;
-  // };
+  // Info Box Styles
+  infoBox: {
+    base: string;
+    email: string;
+    phone: string;
+    location: string;
+  };
 
-  // // Navigation Styles (for theme2 sidebar)
-  // sidebar: {
-  //   container: string;
-  //   title: string;
-  //   navItem: string;
-  // };
+  // Navigation Styles (for theme2 sidebar)
+  sidebar: {
+    container: string;
+    title: string;
+    navItem: string;
+    navItemActive: string;
+  };
 
-  // // Loading & Error States
-  // loading: {
-  //   spinner: string;
-  //   container: string;
-  // };
+  // Loading & Error States
+  loading: {
+    spinner: string;
+    container: string;
+    text: string;
+  };
 
-  // error: {
-  //   text: string;
-  //   container: string;
-  // };
+  error: {
+    text: string;
+    container: string;
+  };
 
-  // // Utility Classes
-  // utils: {
-  //   gradient: string;
-  //   shadow: string;
-  //   border: string;
-  //   transition: string;
-  //   hover: string;
-  // };
+  // Mobile Menu Styles
+  mobileMenu: {
+    overlay: string;
+    drawer: string;
+    header: string;
+    navItem: string;
+    navItemActive: string;
+    themeButton: string;
+    themeOption: string;
+    themeOptionActive: string;
+  };
 
+  // Utility Classes
+  utils: {
+    gradient: string;
+    shadow: string;
+    border: string;
+    transition: string;
+    hover: string;
+  };
 }
 
 export interface ThemeContextType {
-  currentTheme: Theme;
-  setTheme: (theme: Theme) => void;
+  currentTheme: ThemeType;
+  setTheme: (theme: ThemeType) => void;
 }
-
 
 export interface GetNavlinkType {
   currentTheme: ThemeType;
-  isActive: boolean
+  isActive: boolean;
 }
+
 export interface MobileMenuProps {
   isMobileMenuOpen: boolean;
-  setIsMobileThemeOpen: (open: boolean) => void;
-  toggleMobileTheme: () => void;
-  isMobileThemeOpen: boolean;
-  closeMobileMenu: () => void;
+  toggleMobileMenu: () => void;
+
 }

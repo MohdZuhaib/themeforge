@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { ThemeType, ThemeContextType, Theme } from '../types';
+import { ThemeType, ThemeContextType } from '../types';
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
@@ -7,13 +7,8 @@ interface ThemeProviderProps {
   children: ReactNode;
 }
 
-const themes: Record<string, Theme> = {
-  theme1: {
-    button: 'primary rounded-full'
-  }
-}
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [currentTheme, setCurrentTheme] = useState<Theme>(themes.theme1);
+  const [currentTheme, setCurrentTheme] = useState<ThemeType>('theme1');
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   // Load theme from localStorage on mount
@@ -55,3 +50,5 @@ export const useTheme = () => {
   }
   return context;
 };
+
+export { ThemeContext };

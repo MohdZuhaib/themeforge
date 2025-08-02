@@ -1,20 +1,17 @@
 import React from 'react';
 import { Product } from '../types';
-import { useTheme } from '../contexts/ThemeContext';
+import { useThemeStyles } from '../hooks/useThemeStyles';
 import { Star, ShoppingCart } from 'lucide-react';
-import { getButtonClasses, getCardClasses, getDescriptionClasses, getPriceClasses, getTitleClasses } from '../utils';
 
 interface ProductCardProps {
   product: Product;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const { currentTheme } = useTheme();
-
-
+  const styles = useThemeStyles();
 
   return (
-    <div className={getCardClasses(currentTheme)}>
+    <div className={styles.card.base}>
       <div className="aspect-w-16 aspect-h-12 bg-gray-200">
         <img
           src={product.image}
@@ -25,35 +22,33 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </div>
 
       <div className="p-4">
-        <h3 className={getTitleClasses(currentTheme)}>
+        <h3 className={styles.card.title}>
           {product.title}
         </h3>
 
-        <p className={getDescriptionClasses(currentTheme)}>
+        <p className={styles.card.description}>
           {product.description}
         </p>
 
         <div className="flex items-center justify-between mb-4">
-          <span className={getPriceClasses(currentTheme)}>
+          <span className={styles.card.price}>
             ${product.price}
           </span>
 
-          <div className="flex items-center space-x-1">
+          <div className={styles.card.rating}>
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-            <span className={currentTheme === 'theme2' ? 'text-gray-300' : 'text-gray-600'}>
+            <span className={styles.typography.caption}>
               {product.rating.rate}
             </span>
-            <span className={currentTheme === 'theme2' ? 'text-gray-400' : 'text-gray-400'}>
+            <span className={styles.typography.caption}>
               ({product.rating.count})
             </span>
           </div>
         </div>
 
-        <button className={getButtonClasses(currentTheme)}>
+        <button className={styles.button.primary}>
           <ShoppingCart className="w-4 h-4" />
-          <span className={currentTheme === 'theme3' ? 'font-["Pacifico"]' : ''}>
-            Add to Cart
-          </span>
+          <span>Add to Cart</span>
         </button>
       </div>
     </div>
