@@ -18,7 +18,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <div className={styles.card.base}>
       <div
-        className={`bg-gray-200 w-full flex items-center justify-center shrink-0 ${!isTheme3 ? 'md:w-[180px] h-[180px]' : ''
+        className={`w-full flex md:items-center justify-center shrink-0 ${!isTheme3 ? 'md:w-[180px] md:h-[180px]' : ''
           }`}
       >
         <img
@@ -30,7 +30,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </div>
 
       <div className="p-4">
-        <h3 className={`${styles.card.title} min-h-[4.5rem]`}>
+        <h3 className={`${styles.card.title} ${isTheme3 && 'md:min-h-[4.5rem]'}`}>
           {product.title}
         </h3>
 
@@ -54,7 +54,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </div>
         </div>
 
-        <button className={styles.button.primary}>
+        <button className={`${styles.button.primary} ${styles.card.button}`}>
           <ShoppingCart className="w-4 h-4" />
           <span>Add to Cart</span>
         </button>

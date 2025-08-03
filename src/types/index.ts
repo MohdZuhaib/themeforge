@@ -53,6 +53,7 @@ export interface ThemeStyles {
     rating: string;
     feature: string;
     content: string;
+    button: string
   };
 
   // Button Styles

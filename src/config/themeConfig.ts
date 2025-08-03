@@ -33,13 +33,14 @@ export const themeStyles: Record<ThemeType, ThemeStyles> = {
 
         // Card Component
         card: {
-            base: 'flex bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-1',
+            base: 'flex items-center flex-col md:flex-row bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-1',
             title: 'text-lg font-semibold text-gray-900 mb-2 line-clamp-2',
             description: 'text-sm text-gray-600 mb-4 line-clamp-3',
             price: 'text-2xl font-bold text-blue-600',
             rating: 'flex items-center space-x-1 text-yellow-500',
             feature: 'bg-white rounded-lg shadow-sm border border-gray-200 p-6 text-center hover:shadow-md transition-shadow',
-            content: 'bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8 hover:shadow-md transition-shadow'
+            content: 'bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8 hover:shadow-md transition-shadow',
+            button: 'w-full md:w-fit'
         },
 
         // Buttons
@@ -141,13 +142,14 @@ export const themeStyles: Record<ThemeType, ThemeStyles> = {
 
         // Card Component
         card: {
-            base: 'flex bg-gray-800 rounded-lg shadow-lg border border-gray-700 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-blue-500',
+            base: 'flex items-center flex-col md:flex-row bg-gray-800 rounded-lg shadow-lg border border-gray-700 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-blue-500',
             title: 'text-lg font-bold text-gray-100 mb-2 line-clamp-2',
             description: 'text-xs text-gray-300 mb-4 line-clamp-3',
             price: 'text-xl font-bold text-blue-400',
             rating: 'flex items-center space-x-1 text-yellow-400',
             feature: 'bg-gray-800 rounded-lg shadow-lg border border-gray-700 p-6 text-center hover:shadow-xl transition-shadow',
-            content: 'bg-gray-800 rounded-lg shadow-lg border border-gray-700 p-8 mb-8 hover:shadow-xl transition-shadow'
+            content: 'bg-gray-800 rounded-lg shadow-lg border border-gray-700 p-8 mb-8 hover:shadow-xl transition-shadow',
+            button: 'w-full md:w-fit'
         },
 
         // Buttons
@@ -250,17 +252,18 @@ export const themeStyles: Record<ThemeType, ThemeStyles> = {
         // Card Component
         card: {
             base: 'bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border-2 border-pink-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-pink-400 hover:bg-white',
-            title: 'text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-2 line-clamp-2 font-["Pacifico"]',
+            title: 'text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-2 line-clamp-2 font-["Pacifico"]',
             description: 'text-sm text-gray-700 mb-4 line-clamp-3',
             price: 'text-2xl font-black text-pink-600 font-["Pacifico"]',
             rating: 'flex items-center space-x-1 text-orange-500',
             feature: 'bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border-2 border-pink-200 p-8 text-center hover:shadow-2xl hover:bg-white transition-all hover:scale-105',
-            content: 'bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border-2 border-pink-200 p-10 mb-10 hover:shadow-2xl hover:bg-white transition-all hover:scale-105'
+            content: 'bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border-2 border-pink-200 p-10 mb-10 hover:shadow-2xl hover:bg-white transition-all hover:scale-105',
+            button: 'w-full md:w-fit'
         },
 
         // Buttons
         button: {
-            primary: 'w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-4 rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all hover:shadow-lg hover:scale-105 flex items-center justify-center space-x-2 font-semibold',
+            primary: 'bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-4 rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all hover:shadow-lg hover:scale-105 flex items-center justify-center space-x-2 font-semibold',
             secondary: 'bg-white text-purple-600 border-2 border-purple-500 px-6 py-2 rounded-lg font-bold hover:bg-purple-50 transition-all duration-300',
             ghost: 'text-purple-600 px-4 py-2 rounded-md hover:bg-purple-100 transition-all duration-300'
         },
