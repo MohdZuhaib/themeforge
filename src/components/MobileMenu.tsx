@@ -121,6 +121,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                                         onClick={() => {
                                             setTheme(option.value);
                                             setThemeDropdown(false);
+                                            toggleMobileMenu()
                                         }}
                                         className={`w-full text-left px-6 py-3 rounded-lg text-sm transition-all duration-200 ${currentTheme === option.value
                                             ? styles.mobileMenu.themeOptionActive

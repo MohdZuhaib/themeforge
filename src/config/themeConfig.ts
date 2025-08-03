@@ -178,7 +178,7 @@ export const themeStyles: Record<ThemeType, ThemeStyles> = {
 
         // Sidebar
         sidebar: {
-            container: 'fixed left-0 top-16 h-full w-64 bg-gray-800 border-r border-gray-700 transition-all duration-500 hidden lg:block',
+            container: 'fixed left-0 top-16 pt-8 px-4 space-y-2 h-full w-64 bg-gray-800 border-r border-gray-700 transition-all duration-500 hidden lg:block',
             title: 'text-xl font-bold text-gray-100',
             navItem: 'text-gray-300 hover:bg-gray-700 hover:text-white hover:transform hover:scale-105',
             navItemActive: 'bg-blue-600 text-white shadow-lg transform scale-105'

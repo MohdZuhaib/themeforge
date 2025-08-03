@@ -31,7 +31,7 @@ const Header: React.FC = () => {
                 </span>
               </Link>
 
-              <nav className="hidden md:flex space-x-1">
+              {currentTheme !== 'theme2' && <nav className="hidden md:flex space-x-1">
                 {[
                   { path: '/', label: 'Home' },
                   { path: '/about', label: 'About' },
@@ -48,7 +48,7 @@ const Header: React.FC = () => {
                     {item.label}
                   </Link>
                 ))}
-              </nav>
+              </nav>}
             </div>
 
             <div className="flex items-center space-x-4">
